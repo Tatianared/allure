@@ -27,6 +27,7 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
     testImplementation 'com.github.javafaker:javafaker:1.0.1'
     testImplementation 'com.codeborne:selenide:5.19.0'
+    testImplementation 'io.qameta.allure:allure-selenide:2.16.1'
     testImplementation 'com.github.javafaker:javafaker:1.0.2'
     testImplementation 'io.rest-assured:rest-assured:4.3.3'
     testImplementation("io.github.bonigarcia:webdrivermanager:5.0.3")
