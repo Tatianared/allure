@@ -49,8 +49,10 @@ class DeliveryTest {
         $(By.className("button__text")).click();
         $("[data-test-id=success-notification]").shouldHave(text("успешно"));
         $(".notification__content").
-                shouldHave(text("Встреча успешно забронирована на " + firstMeetingDate), Duration.ofSeconds(15))
+                shouldHave(text("Встреча успешно запланирована на " + firstMeetingDate), Duration.ofSeconds(15))
                 .shouldBe(Condition.visible);
+        $("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);
+        $("[data-test-id='date'] input").setValue(secondMeetingDate);
         $(By.className("button__text")).click();
         $("[data-test-id=replan-notification]").shouldHave(text("У вас уже запланирована встреча на другую дату. Перепланировать?"));
         $(".notification_visible .button").click();
